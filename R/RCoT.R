@@ -51,19 +51,19 @@ RCoT <- function(x,y,z=NULL,approx="lpd4",num_f=25,num_f2=5,seed=NULL){
       r1=500
     } else {r1=r;}
 
-    #x=normalize(x);
-    #y=normalize(y);
-    #z=normalize(z);
-
-    for (t in seq_len(ncol(x))){
-      x[,t] = pnorm(ecdf(x[,t])(x[,t]));
-    }
-    for (t in seq_len(ncol(y))){
-      y[,t] = pnorm(ecdf(y[,t])(y[,t]));
-    }
-    for (t in seq_len(d)){
-      z[,t] = pnorm(ecdf(z[,t])(z[,t]));
-    }
+    x=normalize(x);
+    y=normalize(y);
+    z=normalize(z);
+    
+    #for (t in seq_len(ncol(x))){
+    #  x[,t] = pnorm(ecdf(x[,t])(x[,t]));
+    #}
+    #for (t in seq_len(ncol(y))){
+    #  y[,t] = pnorm(ecdf(y[,t])(y[,t]));
+    #}
+    #for (t in seq_len(d)){
+    #  z[,t] = pnorm(ecdf(z[,t])(z[,t]));
+    #}
 
 
     four_z = random_fourier_features(z[,1:d],num_f=num_f,sigma=median(c(t(dist(z[1:r1,])))), seed = seed );
