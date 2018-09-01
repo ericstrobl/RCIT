@@ -1,3 +1,6 @@
+# 9/1/18
+-Variables are now transformed component-wise to standard normal distributions rather than standardized to mean 0 variance 1. This limits (but does not completely eliminate) the infuence of outliers so that the null distribution can be more accurately estimated. Outliers often exist with, for example, multiplicative noise.
+
 # 6/10/17
 -Added a permutation option to estimate the null (approx="perm"). May be better for smaller sample sizes, although the permutation doesn't change the fact that non-linear regression is difficult with few samples.
 
