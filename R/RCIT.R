@@ -34,8 +34,6 @@ RCIT <- function(x,y,z=NULL,approx="lpd4",num_f=25,num_f2=5, seed=NULL){
     y=matrix2(y);
     z=matrix2(z);
     
-    y = cbind(y,z)
-    
     z=z[,apply(z,2,sd)>0];
     z=matrix2(z);
     d=ncol(z);
@@ -66,6 +64,9 @@ RCIT <- function(x,y,z=NULL,approx="lpd4",num_f=25,num_f2=5, seed=NULL){
     for (t in seq_len(d)){
       z[,t] = pnorm(ecdf(z[,t])(z[,t]));
     }
+    
+        
+    y = cbind(y,z)
     
     
     four_z = random_fourier_features(z[,1:d],num_f=num_f,sigma=median(c(t(dist(z[1:r1,])))), seed = seed );
