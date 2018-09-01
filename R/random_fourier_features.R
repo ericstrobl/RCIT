@@ -30,7 +30,7 @@ random_fourier_features <- function(x,w=NULL,b=NULL,num_f=NULL,sigma=NULL,seed=N
   #w=rbind(w,(1/sigma)*matrix(rnorm((num_f-nrow(w))*c),num_f-nrow(w),c));
   #b=rbind(b,repmat(2*pi*runif(num_f-nrow(b)),1,r));
   #}
-  feat = sqrt(2)*t(tanh(w[1:num_f,1:c]%*%t(x)+b[1:num_f,]));
+  feat = sqrt(2)*t(cos(w[1:num_f,1:c]%*%t(x)+b[1:num_f,]));
 
   out=list(feat=feat,w=w,b=b);
   return(out)
