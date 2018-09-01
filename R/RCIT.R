@@ -51,19 +51,19 @@ RCIT <- function(x,y,z=NULL,approx="lpd4",num_f=25,num_f2=5, seed=NULL){
       r1=500
     } else {r1=r;}
     
-    #x=normalize(x);
-    #y=normalize(y);
-    #z=normalize(z);
+    x=normalize(x);
+    y=normalize(y);
+    z=normalize(z);
     
-    for (t in seq_len(ncol(x))){
-      x[,t] = pnorm(ecdf(x[,t])(x[,t]));
-    }
-    for (t in seq_len(ncol(y))){
-      y[,t] = pnorm(ecdf(y[,t])(y[,t]));
-    }
-    for (t in seq_len(d)){
-      z[,t] = pnorm(ecdf(z[,t])(z[,t]));
-    }
+    #for (t in seq_len(ncol(x))){
+    #  x[,t] = pnorm(ecdf(x[,t])(x[,t]));
+    #}
+    #for (t in seq_len(ncol(y))){
+    #  y[,t] = pnorm(ecdf(y[,t])(y[,t]));
+    #}
+    #for (t in seq_len(d)){
+    #  z[,t] = pnorm(ecdf(z[,t])(z[,t]));
+    #}
     
         
     y = cbind(y,z)
