@@ -22,7 +22,7 @@
 #' RCIT(x,y,z,seed=2);
 
 
-RCIT <- function(x,y,z=NULL,approx="lpd4",num_f=25,num_f2=5, seed=NULL){
+RCIT <- function(x,y,z=NULL,approx="lpd4",num_f=50,num_f2=5, seed=NULL){
   
   if (length(z)==0){
     out=RIT(x,y,approx=approx,seed=seed);
