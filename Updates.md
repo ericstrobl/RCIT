@@ -1,3 +1,8 @@
+# 9/2/18
+-Faster inverse with Cholesky decomposition.
+
+-Bumped up default number of Fourier features for the conditioning set to 100.
+
 # 6/10/17
 -Added a permutation option to estimate the null (approx="perm"). May be better for smaller sample sizes, although the permutation doesn't change the fact that non-linear regression is difficult with few samples.
 
