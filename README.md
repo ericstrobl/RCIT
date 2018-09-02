@@ -1,5 +1,5 @@
 # RCIT and RCoT
-This is an R package implementing the Randomized Conditional Independence Test (RCIT) and the Randomized conditional Correlation Test (RCoT).
+This is an R package implementing the Randomized Conditional Independence Test (RCIT) and the Randomized conditional Correlation Test (RCoT). As a general rule, RCoT is superior to RCIT for conditional independence testing.
 
 # Installation
 
