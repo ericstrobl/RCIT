@@ -48,7 +48,7 @@ RIT <- function(x,y,approx="lpd4",seed=NULL){
   #approximate null distributions
 
   if (approx == "perm"){
-    nperm =100;
+    nperm =1000;
 
     Stas = c();
     for (ps in 1:nperm){
@@ -89,7 +89,7 @@ RIT <- function(x,y,approx="lpd4",seed=NULL){
     } else if (approx == "lpd4"){
       eig_d_values=eig_d$values;
       p=try(1-lpb4(eig_d_values,Sta), silent=TRUE);
-      if (!is.numeric(p)){
+      if (!is.numeric(p)  | is.nan(p)){
         p=1-hbe(eig_d$values,Sta);
       }
     }
