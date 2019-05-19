@@ -17,3 +17,5 @@ The package depends on the MASS and momentchi2 packages on CRAN, so please insta
 
 > RCoT(rnorm(1000),rnorm(1000),rnorm(1000))
 
+> RCoT(rnorm(1000),rnorm(1000),matrix(rnorm(2000),1000,2)) # matrices for more than two variables
+
